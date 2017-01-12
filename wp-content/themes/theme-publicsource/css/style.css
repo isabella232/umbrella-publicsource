@@ -194,6 +194,18 @@
   border-color: #418cff;
   color: #418cff;
 }
+.homepage-border {
+  border-bottom: 5px #418cff solid;
+}
+.homepage-section-header {
+  border-bottom: 5px #418cff solid;
+  font-family: 'tk-mallory-n7', sans-serif;
+  color: #232323;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  font-size: 1.3em;
+}
 .prominence-sponsored-tag {
   content: 'sponsored';
   text-transform: uppercase;
@@ -301,13 +313,23 @@
     display: none;
   }
 }
+.sub-stories h5.top-tag {
+  border-bottom: 5px #418cff solid;
+  font-family: 'tk-mallory-n7', sans-serif;
+  color: #232323;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  font-size: 1.3em;
+  margin-bottom: 1em;
+}
 .sub-stories .story {
   margin-bottom: 1.5em;
 }
 .sub-stories h3 {
   margin-bottom: 0.35em;
   font-family: 'tk-mallory-n3', sans-serif;
-  font-size: 20px;
+  font-size: 19px;
 }
 .sub-stories h3 a {
   color: #232323;
@@ -885,13 +907,13 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
   color: #74abff;
 }
 .largo-follow .social-btn {
-  background-color: #232323 !important;
+  background-color: #418cff;
 }
 .largo-follow .social-btn.subscribe i {
-  color: #418cff;
+  color: #232323 !important;
 }
 .largo-follow .social-btn:hover {
-  background-color: #3d3d3d !important;
+  background-color: #74abff !important;
 }
 .widget #mc_embed_signup form {
   vertical-align: middle;

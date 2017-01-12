@@ -29,43 +29,44 @@ global $largo, $shown_ids, $tags;
 	</div>
 
 	<div class="sub-stories span4">
+		<h5 class="top-tag">The Latest</h5>
 		<?php
-		$posts_per_page = 4;
-		$posts_per_page = apply_filters( 'largo_homepage_topstories_post_count', $posts_per_page );
-		$substories = largo_get_featured_posts( array(
-			'tax_query' => array(
-				array(
-					'taxonomy' 	=> 'prominence',
-					'field' 	=> 'slug',
-					'terms' 	=> 'homepage-featured'
-				)
-			),
-			'posts_per_page' => $posts_per_page,
-			'post__not_in' 	 => $shown_ids
-		) );
-		if ( $substories->have_posts() ) :
-			$count = 0;
-			while ( $substories->have_posts() ) : $substories->the_post(); $shown_ids[] = get_the_ID();
-				get_template_part( 'partials/ps-featured', 'secondary' );
-				$count++;
-			endwhile;
-		endif; // end more featured posts 
-
-		// If not enough featured posts, backfill with recent posts
-		if ( $count < 4 ) :
-			$args = array (
-				'posts_per_page' => ( 4 - $count ),
+			$posts_per_page = 4;
+			$posts_per_page = apply_filters( 'largo_homepage_topstories_post_count', $posts_per_page );
+			$substories = largo_get_featured_posts( array(
+				'tax_query' => array(
+					array(
+						'taxonomy' 	=> 'prominence',
+						'field' 	=> 'slug',
+						'terms' 	=> 'homepage-featured'
+					)
+				),
+				'posts_per_page' => $posts_per_page,
 				'post__not_in' 	 => $shown_ids
-			);
-			$recent_posts = new WP_Query( $args );
-
-			if ( $recent_posts->have_posts() ) :
-				while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); $shown_ids[] = get_the_ID();
+			) );
+			if ( $substories->have_posts() ) :
+				$count = 0;
+				while ( $substories->have_posts() ) : $substories->the_post(); $shown_ids[] = get_the_ID();
 					get_template_part( 'partials/ps-featured', 'secondary' );
-					$count++; 
-				endwhile; 
+					$count++;
+				endwhile;
 			endif; // end more featured posts 
-		endif; // end if $count < 3
+	
+			// If not enough featured posts, backfill with recent posts
+			if ( $count < 4 ) :
+				$args = array (
+					'posts_per_page' => ( 4 - $count ),
+					'post__not_in' 	 => $shown_ids
+				);
+				$recent_posts = new WP_Query( $args );
+	
+				if ( $recent_posts->have_posts() ) :
+					while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); $shown_ids[] = get_the_ID();
+						get_template_part( 'partials/ps-featured', 'secondary' );
+						$count++; 
+					endwhile; 
+				endif; // end more featured posts 
+			endif; // end if $count < 3
 		?>
 	</div>
 </div>

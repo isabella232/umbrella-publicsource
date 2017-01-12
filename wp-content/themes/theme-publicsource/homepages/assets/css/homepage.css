@@ -68,6 +68,18 @@
   border-color: #418cff;
   color: #418cff;
 }
+.homepage-border {
+  border-bottom: 5px #418cff solid;
+}
+.homepage-section-header {
+  border-bottom: 5px #418cff solid;
+  font-family: 'tk-mallory-n7', sans-serif;
+  color: #232323;
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  font-size: 1.3em;
+}
 .prominence-sponsored-tag {
   content: 'sponsored';
   text-transform: uppercase;
@@ -89,18 +101,6 @@
 }
 .prominence-smaller-tag {
   font-size: 10px;
-}
-.homepage-border {
-  border-bottom: 5px #418cff solid;
-}
-.homepage-section-header {
-  border-bottom: 5px #418cff solid;
-  font-family: 'tk-mallory-n7', sans-serif;
-  color: #232323;
-  display: inline-block;
-  width: auto;
-  text-align: left;
-  font-size: 1.3em;
 }
 hr {
   margin: 2em 0;
