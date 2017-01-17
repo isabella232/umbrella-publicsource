@@ -1008,6 +1008,10 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
 .archive .interstitial .widget.no-bg {
   padding: 0 !important;
 }
+.error404 #content .widget {
+  background: none;
+  border: none;
+}
 .archive-background h1 {
   margin-bottom: 0.5em;
   font-family: 'tk-mallory-n7', sans-serif;
