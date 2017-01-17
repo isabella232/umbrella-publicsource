@@ -38,7 +38,7 @@ def staging():
     Work on staging environment
     """
     env.settings    = 'staging'
-    env.hosts       = [ os.environ['PUBLICSOURCE_STAGING_SFTP_HOST',] ]    # ssh host for staging.
+    env.hosts       = [ os.environ['PUBLICSOURCE_STAGING_SFTP_HOST'], ]    # ssh host for staging.
     env.user        = os.environ['PUBLICSOURCE_STAGING_SFTP_USER']    # ssh user for staging.
     env.password    = os.environ['PUBLICSOURCE_STAGING_SFTP_PASSWORD']    # ssh password for staging.
     env.domain      = 'publicsource.staging.wpengine.com'
