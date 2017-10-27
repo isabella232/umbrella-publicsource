@@ -1043,3 +1043,19 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
 #site-footer input.search-query {
   height: auto;
 }
+.widget.salmon {
+  border: none;
+  background: none;
+  background-color: #f8ae7f;
+}
+.widget.ps-blue {
+  border: none;
+  background: none;
+  background-color: #418cff;
+}
+@media (max-width: 469px) {
+  article .alignleft,
+  article .left {
+    float: none;
+  }
+}
