@@ -173,16 +173,16 @@
   background: #418cff;
 }
 .button-styles button.secondary {
-  background: #fb4834;
+  background: #fb6927;
 }
 .button-styles button.secondary:hover {
-  background-color: #ff4530;
+  background-color: #ff6723;
 }
 .button-styles button.alt1 {
-  background: #fb4834;
+  background: #fb6927;
 }
 .button-styles button.alt1:hover {
-  background: #f71d05;
+  background: #eb4c04;
 }
 .button-styles button.alt2 {
   background: #ffffff;
@@ -209,7 +209,7 @@
 .prominence-sponsored-tag {
   content: 'sponsored';
   text-transform: uppercase;
-  background-color: #fc7566;
+  background-color: #fc8c59;
   color: #ffffff;
   padding: .25em .5em;
   display: inline-block;
@@ -433,7 +433,7 @@
 .gform_wrapper.signup_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.signup_form_wrapper .gform_next_button {
-  background-color: #fb4834;
+  background-color: #fb6927;
   position: relative;
   top: -4px;
 }
@@ -499,7 +499,7 @@
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #fb4834;
+  background-color: #fb6927;
   font-weight: 500;
 }
 @media (max-width: 620px) {

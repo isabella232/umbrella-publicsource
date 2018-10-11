@@ -47,16 +47,16 @@
   background: #418cff;
 }
 .button-styles button.secondary {
-  background: #FB6927;
+  background: #fb6927;
 }
 .button-styles button.secondary:hover {
-  background-color: #ff4530;
+  background-color: #ff6723;
 }
 .button-styles button.alt1 {
-  background: #FB6927;
+  background: #fb6927;
 }
 .button-styles button.alt1:hover {
-  background: #f71d05;
+  background: #eb4c04;
 }
 .button-styles button.alt2 {
   background: #ffffff;
@@ -83,7 +83,7 @@
 .prominence-sponsored-tag {
   content: 'sponsored';
   text-transform: uppercase;
-  background-color: #fc7566;
+  background-color: #fc8c59;
   color: #ffffff;
   padding: .25em .5em;
   display: inline-block;
@@ -135,16 +135,16 @@ hr {
     background: #418cff;
   }
   #header-ad-zone-container aside button.secondary {
-    background: #FB6927;
+    background: #fb6927;
   }
   #header-ad-zone-container aside button.secondary:hover {
-    background-color: #ff4530;
+    background-color: #ff6723;
   }
   #header-ad-zone-container aside button.alt1 {
-    background: #FB6927;
+    background: #fb6927;
   }
   #header-ad-zone-container aside button.alt1:hover {
-    background: #f71d05;
+    background: #eb4c04;
   }
   #header-ad-zone-container aside button.alt2 {
     background: #ffffff;
