@@ -88,3 +88,45 @@ function publicsource_interstitial( $counter, $context ) {
 }
 add_action( 'largo_loop_after_post_x', 'publicsource_interstitial', 10, 2 );
 
+
+/**
+ * Add some more background color options for the widgets
+ *
+ * This function replaces largo's largo_widget_custom_fields_form
+ *
+ * @see https://secure.helpscout.net/conversation/454033198/1400?folderId=1219602
+ * @uses add_action() 'in_widget_form'
+ * @since Largo 0.5.5.4
+ */
+function publicsource_widget_custom_fields_form( $widget, $args, $instance ) {
+	$desktop = ! empty( $instance['hidden_desktop'] ) ? 'checked="checked"' : '';
+	$tablet = ! empty( $instance['hidden_tablet'] ) ? 'checked="checked"' : '';
+	$phone = ! empty( $instance['hidden_phone'] ) ? 'checked="checked"' : '';
+?>
+	<label for="<?php echo $widget->get_field_id( 'widget_class' ); ?>"><?php _e('Widget Background', 'largo'); ?></label>
+	<select id="<?php echo $widget->get_field_id('widget_class'); ?>" name="<?php echo $widget->get_field_name('widget_class'); ?>" class="widefat" style="width:90%;">
+		<option <?php selected( $instance['widget_class'], 'default'); ?> value="default"><?php _e('Default', 'largo'); ?></option>
+		<option <?php selected( $instance['widget_class'], 'rev'); ?> value="rev"><?php _e('Reverse', 'largo'); ?></option>
+		<option <?php selected( $instance['widget_class'], 'no-bg'); ?> value="no-bg"><?php _e('No Background', 'largo'); ?></option>
+		<option <?php selected( $instance['widget_class'], 'salmon'); ?> value="salmon"><?php _e('Salmon', 'largo'); ?></option>
+		<option <?php selected( $instance['widget_class'], 'ps-blue'); ?> value="ps-blue"><?php _e('Public Source Blue', 'largo'); ?></option>
+	</select>
+
+	<p style="margin:15px 0 10px 5px">
+	<input class="checkbox" type="checkbox" <?php echo $desktop; ?> id="<?php echo $widget->get_field_id('hidden_desktop'); ?>" name="<?php echo $widget->get_field_name('hidden_desktop'); ?>" /> <label for="<?php echo $widget->get_field_id('hidden_desktop'); ?>"><?php _e('Hidden on Desktops?', 'largo'); ?></label>
+	<br />
+	<input class="checkbox" type="checkbox" <?php echo $tablet; ?> id="<?php echo $widget->get_field_id('hidden_tablet'); ?>" name="<?php echo $widget->get_field_name('hidden_tablet'); ?>" /> <label for="<?php echo $widget->get_field_id('hidden_tablet'); ?>"><?php _e('Hidden on Tablets?', 'largo'); ?></label>
+	<br />
+	<input class="checkbox" type="checkbox" <?php echo $phone; ?> id="<?php echo $widget->get_field_id('hidden_phone'); ?>" name="<?php echo $widget->get_field_name('hidden_phone'); ?>" /> <label for="<?php echo $widget->get_field_id('hidden_phone'); ?>"><?php _e('Hidden on Phones?', 'largo'); ?></label>
+	</p>
+
+	<p>
+		<label for="<?php echo $widget->get_field_id('title_link'); ?>"><?php _e('Widget Title Link <small class="description">(Example: http://google.com)</small>', 'largo'); ?></label>
+		<input type="text" name="<?php echo $widget->get_field_name('title_link'); ?>" id="<?php echo $widget->get_field_id('title_link'); ?>"" class="widefat" value="<?php echo esc_attr( $instance['title_link'] ); ?>"" />
+	</p>
+<?php
+}
+add_action( 'wp_loaded', function() {
+	remove_action( 'in_widget_form', 'largo_widget_custom_fields_form', 1 );
+	add_action( 'in_widget_form', 'publicsource_widget_custom_fields_form', 1, 3 );
+});

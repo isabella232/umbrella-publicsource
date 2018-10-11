@@ -88,11 +88,11 @@ h2 a {
       }
       &.secondary {
         color: @white;
-        border-color: @black;
-        background-color: @black;
+        border-color: @coral;
+        background-color: @coral;
         &:hover {
-          border-color: @black;
-          color: @black;
+          border-color: @coral;
+          color: @coral;
           background-color: @white;
         }
       }
@@ -374,8 +374,8 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
     height: @scaling;
   }
   input[type=submit] {
-    background-color: @black;
-    border: 4px solid @black;
+    background-color: @coral;
+    border: 4px solid @coral;
     padding: 0.5em 1em;
     line-height: 1;
     font-family: @ps_sans;
@@ -383,7 +383,7 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
     text-transform: uppercase;
     &:hover {
       background-color: @white;
-      color: @black;
+      color: @coral;
     }
   }
   @media (max-width: 900px) {
@@ -469,4 +469,25 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
 
 #site-footer input.search-query {
   height: auto;
+}
+
+// Helpscout 1400
+.widget.salmon {
+  border: none;
+  background: none;
+  background-color: #f8ae7f;
+}
+.widget.ps-blue {
+  border: none;
+  background: none;
+  background-color: #418cff;
+}
+
+// Helpscout 1417
+article {
+  .alignleft, .left {
+    @media (max-width: 469px) {
+      float: none;
+    }
+  }
 }

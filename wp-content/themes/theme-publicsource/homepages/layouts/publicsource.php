@@ -4,6 +4,7 @@ include_once get_template_directory() . '/homepages/homepage-class.php';
 
 class PublicSourceLayout extends Homepage {
 	function __construct( $options = array() ) {
+		$suffix = (LARGO_DEBUG)? '' : '.min';
 		$defaults = array(
 			'name' => __( 'PublicSource.org Custom Layout', 'publicsource' ),
 			'description' => __( 'A custom homepage layout for PublicSource based loosely on the Largo top stories homepage layout', 'publicsource' ),
