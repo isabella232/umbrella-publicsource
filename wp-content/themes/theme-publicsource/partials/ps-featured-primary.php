@@ -10,6 +10,6 @@
 	<a href="<?php the_permalink(); ?>" class="clickable"></a>
 	<div class="has-thumbnail-inner">
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<h5 class="byline"><?php largo_byline( true, true ); ?></h5>
+		<h5 class="byline"><?php largo_byline( true, true, get_the_ID() ); ?></h5>
 	</div>
 </div>
