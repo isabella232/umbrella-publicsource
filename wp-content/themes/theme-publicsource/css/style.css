@@ -173,16 +173,16 @@
   background: #418cff;
 }
 .button-styles button.secondary {
-  background: #fb4834;
+  background: #fb6927;
 }
 .button-styles button.secondary:hover {
-  background-color: #ff4530;
+  background-color: #ff6723;
 }
 .button-styles button.alt1 {
-  background: #fb4834;
+  background: #fb6927;
 }
 .button-styles button.alt1:hover {
-  background: #f71d05;
+  background: #eb4c04;
 }
 .button-styles button.alt2 {
   background: #ffffff;
@@ -209,7 +209,7 @@
 .prominence-sponsored-tag {
   content: 'sponsored';
   text-transform: uppercase;
-  background-color: #fc7566;
+  background-color: #fc8c59;
   color: #ffffff;
   padding: .25em .5em;
   display: inline-block;
@@ -433,7 +433,7 @@
 .gform_wrapper.signup_form_wrapper .gform_button[type=submit],
 .gform_wrapper.donation_form_wrapper .gform_next_button,
 .gform_wrapper.signup_form_wrapper .gform_next_button {
-  background-color: #fb4834;
+  background-color: #fb6927;
   position: relative;
   top: -4px;
 }
@@ -499,7 +499,7 @@
   color: #fff;
 }
 .gform_wrapper.donation_form_wrapper ul.gfield_radio li input[type=radio]:checked + label {
-  background-color: #fb4834;
+  background-color: #fb6927;
   font-weight: 500;
 }
 @media (max-width: 620px) {
@@ -680,12 +680,12 @@ h2 a {
 }
 #site-header aside button.secondary {
   color: #ffffff;
-  border-color: #232323;
-  background-color: #232323;
+  border-color: #fb6927;
+  background-color: #fb6927;
 }
 #site-header aside button.secondary:hover {
-  border-color: #232323;
-  color: #232323;
+  border-color: #fb6927;
+  color: #fb6927;
   background-color: #ffffff;
 }
 #site-header aside .textwidget {
@@ -957,8 +957,8 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
   height: 40px;
 }
 .widget #mc_embed_signup input[type=submit] {
-  background-color: #232323;
-  border: 4px solid #232323;
+  background-color: #fb6927;
+  border: 4px solid #fb6927;
   padding: 0.5em 1em;
   line-height: 1;
   font-family: 'tk-mallory-n3', sans-serif;
@@ -967,7 +967,7 @@ body.normal.single-post .hero .navis-slideshow p.wp-caption-text {
 }
 .widget #mc_embed_signup input[type=submit]:hover {
   background-color: #ffffff;
-  color: #232323;
+  color: #fb6927;
 }
 @media (max-width: 900px) {
   .widget #mc_embed_signup label {
