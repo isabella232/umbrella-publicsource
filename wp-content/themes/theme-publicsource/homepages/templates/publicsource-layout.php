@@ -115,6 +115,20 @@ global $largo, $shown_ids, $tags;
 	?>
 </div>
 
+<div id="home-category-grid">
+	<div class="row-fluid">
+		<?php if ( !dynamic_sidebar( 'Home Category Grid' ) ) { ?>
+			<aside class="span4" style="display:block;margin-left: auto;margin-right: auto;background-color:#ddd;color:#bb0000; text-align: center;"> Add some widgets to the Home Category widget area.</aside>
+		<?php } ?>
+	</div>
+</div>
+
+<div id="home-interstitial-3" class="interstitial">
+	<?php
+		dynamic_sidebar( __( 'Homepage Interstitial 3', 'publicsource' ) );
+	?>
+</div>
+
 <div id="home-middle-feature">
 	<?php
 	$args = array (
@@ -144,26 +158,12 @@ global $largo, $shown_ids, $tags;
 					<h5 class="byline"><?php largo_byline( true, true, get_the_id() ); ?></h5>
 					<?php largo_excerpt(); ?>
 				</div>
-			</div>		
+			</div>
 		<?php 
-			$count++; 
+			$count++;
 		endwhile;
 	endif; // end more featured posts 
 	?>
-</div>
-
-<div id="home-interstitial-3" class="interstitial">
-	<?php
-		dynamic_sidebar( __( 'Homepage Interstitial 3', 'publicsource' ) );
-	?>
-</div>
-
-<div id="home-category-grid">
-	<div class="row-fluid">
-		<?php if ( !dynamic_sidebar( 'Home Category Grid' ) ) { ?>
-			<aside class="span4" style="display:block;margin-left: auto;margin-right: auto;background-color:#ddd;color:#bb0000; text-align: center;"> Add some widgets to the Home Category widget area.</aside>
-		<?php } ?>
-	</div>
 </div>
 
 <div id="home-interstitial-4" class="interstitial">
