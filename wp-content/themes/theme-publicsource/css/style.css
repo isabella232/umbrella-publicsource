@@ -126,6 +126,22 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
+.fourcolumn {
+  display: block;
+  width: 23.40425532%;
+  min-height: 28px;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 0;
+}
+.fourcolumn:nth-child( 4n - 2 ),
+.fourcolumn:nth-child( 4n - 1),
+.fourcolumn:nth-child( 4n ) {
+  margin-left: 2.12765957%;
+}
+.fourcolumn:nth-child( 4n + 1 ) {
+  clear: left;
+}
 .twocolumn {
   display: block;
   width: 48.93617021%;
