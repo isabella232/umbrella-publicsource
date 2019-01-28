@@ -1,5 +1,5 @@
-@import '../../../less/_mixins.less';
-@import '../../../less/_vars.less';
+@import (reference) '../../../less/_mixins.less';
+@import (reference) '../../../less/_vars.less';
 
 hr {
   margin: @unit2x 0;
@@ -63,14 +63,14 @@ hr {
         line-height: 2;
       }
       &:hover {
-	    background-color: @blue;
-	    a {
-		  text-decoration: none;
-	    }
+        background-color: @blue;
+        a {
+          text-decoration: none;
+        }
       }
     }
     img {
-	  margin-bottom: 0.65em;
+      margin-bottom: 0.65em;
     }
     h3 {
       margin-bottom: 0.35em;
@@ -79,29 +79,29 @@ hr {
       a {
         color: @black;
         &:hover {
-	      color: @blue;
-	      text-decoration: none;
+          color: @blue;
+          text-decoration: none;
         }
       }
     }
     &:nth-child( 2n + 1 ) {
-	  clear: both;
-	  margin-left: 0;
-	}
-	@media (max-width: 769px) {
-	  .onecolumn; 
-	  &:last-child {
-	    margin-bottom: 0;
-	  }
-	}
-	
+      clear: both;
+      margin-left: 0;
+    }
+    @media (max-width: 769px) {
+      .onecolumn; 
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
   }
   @media (max-width: 480px) {
     margin-bottom: @unit;
     .span8,
     .span4 {
-	  width: 100%;
-	  clear: both;
+      width: 100%;
+      clear: both;
     }
   }
 }
@@ -126,8 +126,8 @@ hr {
     a {
       color: @black;
       &:hover {
-	    color: @blue;
-	    text-decoration: none;
+        color: @blue;
+        text-decoration: none;
       }
     }
   }
@@ -141,35 +141,36 @@ hr {
   @media (max-width: 769px) {
     .span8,
     .span4 {
-	  .onecolumn;
+      .onecolumn;
     }
     img {
-	  margin-bottom: 0.5em;
+      margin-bottom: 0.5em;
     }
     h3 {
-	  font-size: 20px;
+      font-size: 20px;
     }
   }
   @media (max-width: 480px) {
-	p {
-	  display: none;
-	}
-	h5.byline {
+    p {
+      display: none;
+    }
+    h5.byline {
       margin-bottom: @unit2x;
-	}
+    }
   }
 }
 
 #home-category-grid {
+
   h3.widgettitle {
     .homepage-section-header;
     a:hover {
-	  text-decoration: none !important;
-	  color: @blue !important;
+      text-decoration: none !important;
+      color: @blue !important;
     }
   }
   .widget {
-	text-align: center;
+    text-align: center;
     ul li:nth-child(2),
     ul li:nth-child(3) {
       padding-top: @unit;
@@ -186,33 +187,38 @@ hr {
       a {
         color: @black;
         &:hover {
-	      color: @blue;
-	      text-decoration: none;
+          color: @blue;
+          text-decoration: none;
         }
       }
     }
     p.morelink {
-	  margin-top: -8px;
-	  font-family: @ps_sans;
-	  font-style: italic;
-	  text-align: left;
-	  a:hover {
-	    color: @black;
-	    text-decoration: none;
-	  }
+      margin-top: -8px;
+      font-family: @ps_sans;
+      font-style: italic;
+      text-align: left;
+      a:hover {
+        color: @black;
+        text-decoration: none;
+      }
     }
     @media (max-width: 480px) {
-	  margin-bottom: @unit2x;
-	  h5 {
-	    font-size: 20px;
-	  }
-	  &:last-child {
-	    margin-bottom: 0;
-	  }
-	}
+      margin-bottom: @unit2x;
+      h5 {
+        font-size: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
   @media (max-width: 480px) {
     margin-bottom: @unit;
+  }
+}
+@media (min-width: 901px) {
+  #home-category-grid .span3 {
+    .fourcolumn;
   }
 }
 @media (min-width: 481px) and (max-width: 900px) {
@@ -234,25 +240,25 @@ hr {
   .widget {
     text-align: center;
     p.morelink {
-	  clear: both;
-	  font-family: @ps_sans;
-	  font-style: italic;
+      clear: both;
+      font-family: @ps_sans;
+      font-style: italic;
     }
   }
   .largo-recent-posts li {
-	margin-bottom: @unit2x;
+    margin-bottom: @unit2x;
     @media (min-width: 769px) {
       .twocolumn;
     }
   }
   h5 {
-	font-family: @ps_sans_bold;
-	font-size: 24px;
+    font-family: @ps_sans_bold;
+    font-size: 24px;
     a {
       color: @black;
       &:hover {
-	    color: @blue;
-	    text-decoration: none;
+        color: @blue;
+        text-decoration: none;
       }
     }
   }
@@ -262,10 +268,10 @@ hr {
   }
   @media (max-width: 480px) {
     .largo-recent-posts li {
-	  text-align: left;
+      text-align: left;
     }
     h5 {
-	  font-size: 20px;
+      font-size: 20px;
     }
   }
 }
