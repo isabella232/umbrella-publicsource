@@ -211,18 +211,9 @@ hr {
 #home-category-grid .widget {
   text-align: center;
 }
-#home-category-grid .widget ul li:nth-child(2),
-#home-category-grid .widget ul li:nth-child(3) {
-  padding-top: 1em;
-  border-top: solid 1px #c4c4c4;
-}
-#home-category-grid .widget ul li:nth-child(2) a img,
-#home-category-grid .widget ul li:nth-child(3) a img {
-  display: none;
-}
 #home-category-grid .widget h5 {
   font-family: 'tk-mallory-n3', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 0;
   text-align: left;
 }
