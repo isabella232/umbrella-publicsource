@@ -145,7 +145,7 @@ hr {
   color: #232323;
   display: inline-block;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
 }
 #home-middle-feature .span8 {
@@ -201,7 +201,7 @@ hr {
   color: #232323;
   display: inline-block;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
 }
 #home-category-grid h3.widgettitle a:hover {
@@ -298,7 +298,7 @@ hr {
   color: #232323;
   display: inline-block;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
   margin-bottom: 1em;
 }

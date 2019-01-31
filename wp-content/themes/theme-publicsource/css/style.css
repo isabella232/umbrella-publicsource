@@ -221,7 +221,7 @@
   color: #232323;
   display: inline-block;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
 }
 .prominence-sponsored-tag {
@@ -337,7 +337,7 @@
   color: #232323;
   display: inline-block;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.3em;
   margin-bottom: 0.76923077em;
 }
