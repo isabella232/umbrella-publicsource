@@ -112,63 +112,65 @@ $site_name = ( of_get_option( 'nav_alt_site_name', false ) ) ? of_get_option( 'n
 
 					<!-- BEGIN DESKTOP MENU -->
 					<div class="nav-shelf">
-					<ul class="nav">
-						<?php if ( of_get_option('sticky_header_logo') !== '') { ?>
-							<li class="home-icon">
-								<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-									<?php
-									if ( of_get_option( 'sticky_header_logo' ) !== '' )
-										largo_home_icon( 'icon-white' , 'orig' );
-									?>
-								</a>
-							</li>
-						<?php } else { ?>
-							<li class="site-name"><a href="/"><?php echo $site_name; ?></a></li>
-						<?php }
-
-							/* Build Main Navigation using Boostrap_Walker_Nav_Menu() */
-							$args = array(
-								'theme_location' => 'main-nav',
-								'depth'		 => 0,
-								'container'	 => false,
-								'items_wrap' => '%3$s',
-								'menu_class' => 'nav',
-								'walker'	 => new Bootstrap_Walker_Nav_Menu()
-							);
-							largo_nav_menu($args);
-
-							if ( of_get_option( 'show_donate_button') ) {
-								if ($donate_link = of_get_option('donate_link')) { ?>
-								<li class="donate">
-									<a class="donate-link" href="<?php echo esc_url($donate_link); ?>">
-										<span><?php echo esc_html(of_get_option('donate_button_text')); ?></span>
+						<ul class="nav">
+							<?php if ( of_get_option('sticky_header_logo') !== '') { ?>
+								<li class="home-icon">
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
+										<?php
+										if ( of_get_option( 'sticky_header_logo' ) !== '' )
+											largo_home_icon( 'icon-white' , 'orig' );
+										?>
 									</a>
-								</li><?php
-								}
-							}
-							if (has_nav_menu('global-nav')) {
-								$args = array(
-									'theme_location' => 'global-nav',
-									'depth'		 => 1,
-									'container'	 => false,
-									'menu_class' => 'dropdown-menu',
-									'echo' => false
-								);
-								$global_nav = largo_nav_menu($args);
+								</li>
+							<?php } else { ?>
+								<li class="site-name"><a href="/"><?php echo $site_name; ?></a></li>
+							<?php }
 
-								if (!empty($global_nav)) { ?>
-									<li class="menu-item menu-item-has-childen dropdown">
-										<a href="javascript:void(0);" class="dropdown-toggle"><?php
-											//try to get the menu name from global-nav
-											$menus = get_nav_menu_locations();
-											$menu_title = wp_get_nav_menu_object($menus['global-nav'])->name;
-											echo ( $menu_title ) ? $menu_title : __('About', 'largo');
-											?> <b class="caret"></b>
+								/**
+								 * Global Nav
+								 *
+								 * Placed in the same list as the main navigation, outside any drop-down.
+								 *
+								 * @link https://github.com/INN/umbrella-publicsource/issues/12
+								 * @since Largo 0.6.1
+								 */
+								if (has_nav_menu('global-nav')) {
+									$args = array(
+										'theme_location' => 'global-nav',
+										'depth'		 => 1,
+										'container'	 => false,
+										'items_wrap' => '%3$s',
+										'menu_class' => 'nav',
+										'walker'	 => new Bootstrap_Walker_Nav_Menu(),
+									);
+									largo_nav_menu($args);
+								}
+
+								/*
+								 * Main Navigation using Boostrap_Walker_Nav_Menu()
+								 *
+								 * Same as Largo
+								 */
+								$args = array(
+									'theme_location' => 'main-nav',
+									'depth'		 => 0,
+									'container'	 => false,
+									'items_wrap' => '%3$s',
+									'menu_class' => 'nav',
+									'walker'	 => new Bootstrap_Walker_Nav_Menu()
+								);
+								largo_nav_menu($args);
+
+								if ( of_get_option( 'show_donate_button') ) {
+									if ($donate_link = of_get_option('donate_link')) { ?>
+									<li class="donate">
+										<a class="donate-link" href="<?php echo esc_url($donate_link); ?>">
+											<span><?php echo esc_html(of_get_option('donate_button_text')); ?></span>
 										</a>
-										<?php echo $global_nav; ?>
-									</li>
-								<?php } ?>
-							<?php } ?>
+									</li><?php
+									}
+								}
+							?>
 						</ul>
 					</div>
 				</div>
