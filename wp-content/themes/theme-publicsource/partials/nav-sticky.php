@@ -126,6 +126,21 @@ $site_name = ( of_get_option( 'nav_alt_site_name', false ) ) ? of_get_option( 'n
 								<li class="site-name"><a href="/"><?php echo $site_name; ?></a></li>
 							<?php }
 
+								/*
+								 * Main Navigation using Boostrap_Walker_Nav_Menu()
+								 *
+								 * Same as Largo
+								 */
+								$args = array(
+									'theme_location' => 'main-nav',
+									'depth'		 => 0,
+									'container'	 => false,
+									'items_wrap' => '%3$s',
+									'menu_class' => 'nav',
+									'walker'	 => new Bootstrap_Walker_Nav_Menu()
+								);
+								largo_nav_menu($args);
+
 								/**
 								 * Global Nav
 								 *
@@ -146,20 +161,6 @@ $site_name = ( of_get_option( 'nav_alt_site_name', false ) ) ? of_get_option( 'n
 									largo_nav_menu($args);
 								}
 
-								/*
-								 * Main Navigation using Boostrap_Walker_Nav_Menu()
-								 *
-								 * Same as Largo
-								 */
-								$args = array(
-									'theme_location' => 'main-nav',
-									'depth'		 => 0,
-									'container'	 => false,
-									'items_wrap' => '%3$s',
-									'menu_class' => 'nav',
-									'walker'	 => new Bootstrap_Walker_Nav_Menu()
-								);
-								largo_nav_menu($args);
 
 								if ( of_get_option( 'show_donate_button') ) {
 									if ($donate_link = of_get_option('donate_link')) { ?>
