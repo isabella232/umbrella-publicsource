@@ -617,6 +617,37 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   margin-bottom: -24px;
   margin-top: 10px;
 }
+.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+  background-color: #fb6927;
+}
+.nav-shelf li.donate {
+  background-color: #fb6927;
+}
+.nav-shelf li.donate a.donate-link {
+  color: #ffffff;
+}
+.nav-shelf li.donate a.donate-link:hover {
+  color: #fb6927;
+}
+/**
+ * @see https://github.com/INN/umbrella-publicsource/issues/10
+ */
+@media (max-width: 390px) {
+  .nav-shelf li.donate {
+    display: block;
+  }
+  #header-extras li.donate {
+    display: none;
+  }
+}
+@media (min-width: 391px) {
+  .nav-shelf li.donate {
+    display: none;
+  }
+  #header-extras li.donate {
+    display: block;
+  }
+}
 body {
   font-family: 'tk-crimson-n5', serif;
 }

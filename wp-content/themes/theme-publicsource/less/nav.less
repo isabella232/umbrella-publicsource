@@ -1,0 +1,35 @@
+// Coloration items
+// really, Largo?
+.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+  background-color: @secondary;
+}
+.nav-shelf li.donate {
+  background-color: @secondary;
+  a.donate-link {
+    color: @white;
+    &:hover {
+      color: @secondary;
+    }
+  }
+}
+
+/**
+ * @see https://github.com/INN/umbrella-publicsource/issues/10
+ */
+@media (max-width: 390px) {
+  .nav-shelf li.donate {
+    display: block;
+  }
+  #header-extras li.donate {
+    display: none;
+  }
+}
+@media (min-width: 391px) {
+  .nav-shelf li.donate {
+    display: none;
+  }
+  #header-extras li.donate {
+    display: block;
+  }
+}
+
