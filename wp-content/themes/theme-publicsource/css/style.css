@@ -142,6 +142,21 @@
 .fourcolumn:nth-child( 4n + 1 ) {
   clear: left;
 }
+.threecolumn {
+  display: block;
+  width: 31.91489361%;
+  min-height: 28px;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 0;
+}
+.threecolumn:nth-child( 3n - 1),
+.threecolumn:nth-child( 3n ) {
+  margin-left: 2.12765957%;
+}
+.threecolumn:nth-child( 3n + 1 ) {
+  clear: left;
+}
 .twocolumn {
   display: block;
   width: 48.93617021%;

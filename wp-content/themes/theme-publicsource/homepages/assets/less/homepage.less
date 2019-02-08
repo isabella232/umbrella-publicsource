@@ -169,6 +169,10 @@ hr {
       color: @blue !important;
     }
   }
+  li a + h5 {
+    // trying to scope this so it only affects the h5 when it's next to an image
+    padding-left: 60px;
+  }
   .widget {
     text-align: center;
     h5 {
@@ -210,7 +214,7 @@ hr {
 }
 @media (min-width: 901px) {
   #home-category-grid .span3 {
-    .fourcolumn;
+    .threecolumn;
   }
 }
 @media (min-width: 481px) and (max-width: 900px) {
