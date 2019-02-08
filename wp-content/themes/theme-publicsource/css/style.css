@@ -99,14 +99,16 @@
   clear: both;
 }
 .visuallyhidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
-  padding: 0;
   border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
 }
 .hide-text {
   font: 0/0 a;
@@ -123,6 +125,22 @@
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
+}
+.fourcolumn {
+  display: block;
+  width: 23.40425532%;
+  min-height: 28px;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 0;
+}
+.fourcolumn:nth-child( 4n - 2 ),
+.fourcolumn:nth-child( 4n - 1),
+.fourcolumn:nth-child( 4n ) {
+  margin-left: 2.12765957%;
+}
+.fourcolumn:nth-child( 4n + 1 ) {
+  clear: left;
 }
 .twocolumn {
   display: block;

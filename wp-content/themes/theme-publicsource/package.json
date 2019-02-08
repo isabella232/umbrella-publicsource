@@ -2,9 +2,9 @@
   "name": "publicsource-theme",
   "version": "1.0.0",
   "description": "Theme for publicsource.org",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/INN/umbrella-publicsource.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/INN/umbrella-publicsource.git"
   },
   "license": "GPL-2.0",
   "devDependencies": {
