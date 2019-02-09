@@ -208,6 +208,9 @@ hr {
   text-decoration: none !important;
   color: #418cff !important;
 }
+#home-category-grid li a + h5 {
+  padding-left: 60px;
+}
 #home-category-grid .widget {
   text-align: center;
 }
@@ -251,25 +254,24 @@ hr {
   }
 }
 @media (min-width: 901px) {
-  #home-category-grid .span3 {
+  #home-category-grid .span4 {
     display: block;
-    width: 23.40425532%;
+    width: 31.91489361%;
     min-height: 28px;
     box-sizing: border-box;
     float: left;
     margin-left: 0;
   }
-  #home-category-grid .span3:nth-child( 4n - 2 ),
-  #home-category-grid .span3:nth-child( 4n - 1),
-  #home-category-grid .span3:nth-child( 4n ) {
+  #home-category-grid .span4:nth-child( 3n - 1),
+  #home-category-grid .span4:nth-child( 3n ) {
     margin-left: 2.12765957%;
   }
-  #home-category-grid .span3:nth-child( 4n + 1 ) {
+  #home-category-grid .span4:nth-child( 3n + 1 ) {
     clear: left;
   }
 }
 @media (min-width: 481px) and (max-width: 900px) {
-  #home-category-grid .span3 {
+  #home-category-grid .span4 {
     display: block;
     width: 48.93617021%;
     min-height: 28px;
@@ -277,15 +279,15 @@ hr {
     float: left;
     margin-left: 0;
   }
-  #home-category-grid .span3:nth-child( 2n ) {
+  #home-category-grid .span4:nth-child( 2n ) {
     margin-left: 2.12765957%;
   }
-  #home-category-grid .span3:nth-child( 2n + 1 ) {
+  #home-category-grid .span4:nth-child( 2n + 1 ) {
     clear: left;
   }
 }
 @media (max-width: 480px) {
-  #home-category-grid .span3 {
+  #home-category-grid .span4 {
     clear: both;
     width: 100%;
     margin-left: 0;

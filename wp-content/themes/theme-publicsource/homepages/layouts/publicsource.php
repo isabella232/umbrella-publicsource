@@ -94,7 +94,7 @@ function publicsource_add_homepage_widget_areas() {
 			'name' => __( 'Home Category Grid', 'publicsource' ),
 			'id' => 'home-category-grid',
 			'description' => __( 'This area should be filled with two Largo Recent Posts widgets.', 'publicsource' ),
-			'before_widget' => '<aside id="%1$s" class="%2$s span3 clearfix">',
+			'before_widget' => '<aside id="%1$s" class="%2$s span4 clearfix">',
 			'after_widget' => '</aside>',
 			'before_title' => '<h3 class="widgettitle">',
 			'after_title' => '</h3>',
