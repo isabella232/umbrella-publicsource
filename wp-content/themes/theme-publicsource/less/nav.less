@@ -1,7 +1,17 @@
 // Coloration items
 // really, Largo?
-.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+.navbar.sticky-navbar .nav-right #header-extras .donate a span,
+.donate-btn {
   background-color: @secondary;
+  color: @white;
+  text-transform: none;
+  &:hover {
+    background-color: @white;
+    color: @secondary;
+    a {
+      color: @secondary;
+    }
+  }
 }
 .nav-shelf li.donate {
   background-color: @secondary;
@@ -11,6 +21,9 @@
       color: @secondary;
     }
   }
+}
+.donate-btn i.icon-heart {
+  display: none;
 }
 
 /**
