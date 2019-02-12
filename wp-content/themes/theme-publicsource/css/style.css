@@ -656,6 +656,9 @@ body.normal.page.page-template-page-clean article.page > header h1 {
 .nav-shelf li.donate a.donate-link:hover {
   color: #fb6927;
 }
+.donate-btn i.icon-heart {
+  display: none;
+}
 /**
  * @see https://github.com/INN/umbrella-publicsource/issues/10
  */
