@@ -632,8 +632,20 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   margin-bottom: -24px;
   margin-top: 10px;
 }
-.navbar.sticky-navbar .nav-right #header-extras .donate a span {
+.navbar.sticky-navbar .nav-right #header-extras .donate a span,
+.donate-btn {
   background-color: #fb6927;
+  color: #ffffff;
+  text-transform: none;
+}
+.navbar.sticky-navbar .nav-right #header-extras .donate a span:hover,
+.donate-btn:hover {
+  background-color: #ffffff;
+  color: #fb6927;
+}
+.navbar.sticky-navbar .nav-right #header-extras .donate a span:hover a,
+.donate-btn:hover a {
+  color: #fb6927;
 }
 .nav-shelf li.donate {
   background-color: #fb6927;
