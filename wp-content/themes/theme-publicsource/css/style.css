@@ -634,18 +634,18 @@ body.normal.page.page-template-page-clean article.page > header h1 {
 }
 .navbar.sticky-navbar .nav-right #header-extras .donate a span,
 .donate-btn {
-  background-color: #fb6927;
+  background-color: #418cff;
   color: #ffffff;
   text-transform: none;
 }
 .navbar.sticky-navbar .nav-right #header-extras .donate a span:hover,
 .donate-btn:hover {
   background-color: #ffffff;
-  color: #fb6927;
+  color: #418cff;
 }
 .navbar.sticky-navbar .nav-right #header-extras .donate a span:hover a,
 .donate-btn:hover a {
-  color: #fb6927;
+  color: #418cff;
 }
 .nav-shelf li.donate {
   background-color: #fb6927;
