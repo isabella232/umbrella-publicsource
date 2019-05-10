@@ -659,6 +659,9 @@ body.normal.page.page-template-page-clean article.page > header h1 {
 .donate-btn i.icon-heart {
   display: none;
 }
+.btn {
+  border-radius: 0;
+}
 /**
  * @see https://github.com/INN/umbrella-publicsource/issues/10
  */
