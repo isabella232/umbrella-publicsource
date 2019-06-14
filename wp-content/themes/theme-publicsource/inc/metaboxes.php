@@ -25,6 +25,9 @@ function subtitle_meta_box_display() {
 }
 /**
  * Register our subtitle metabox
+ *
+ * This doesn't have anything special applied to it for Gutenberg.
+ * If Publicsource switches to Gutenberg, read https://developer.wordpress.org/block-editor/developers/backward-compatibility/meta-box/ and update this box as necessary.
  */
 add_action(
 	'init',
