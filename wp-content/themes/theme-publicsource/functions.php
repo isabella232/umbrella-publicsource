@@ -5,7 +5,7 @@ define( 'INN_MEMBER', true );
 /**
  * Include theme files
  *
- * Based off of how Largo loads files: https://github.com/INN/Largo/blob/master/functions.php#L358
+ * Based off of how Largo loads files: https://github.com/INN/largo/blob/v0.6.3/functions.php#L204-L208
  *
  * 1. hook function Largo() on after_setup_theme
  * 2. function Largo() runs Largo::get_instance()
@@ -16,7 +16,15 @@ define( 'INN_MEMBER', true );
  * @link https://github.com/INN/Largo/blob/master/functions.php#L145
  */
 function largo_child_require_files() {
-	require_once( get_stylesheet_directory() . '/homepages/layouts/publicsource.php' );
+	$includes = array(
+		'/homepages/layouts/publicsource.php',
+		'/inc/metaboxes.php',
+	);
+	foreach ( $includes as $include ) {
+		if ( 0 === validate_file( get_stylesheet_directory() ) ) {
+			require_once( get_stylesheet_directory() . $include );
+		}
+	}
 }
 add_action( 'after_setup_theme', 'largo_child_require_files' );
 
