@@ -38,7 +38,7 @@ add_action(
 			'subtitle_meta_box_display',
 			'post',
 			'normal',
-			'core'
+			'high'
 		);
 		largo_register_meta_input( 'subtitle', 'wp_filter_post_kses' );
 	}
