@@ -64,28 +64,6 @@ module.exports = function(grunt) {
                 ext: '.min.css'
             }]
         }
-    },
-
-    version: {
-      src: [
-        'package.json'
-      ],
-      css: {
-        options: {
-          prefix: 'Version: '
-        },
-        src: [
-          'style.css',
-        ]
-      },
-      readme: {
-        options: {
-          prefix: '\\*\\*Current version:\\*\\* v'
-        },
-        src: [
-          'readme.md'
-        ]
-      }
     }
   });
 
