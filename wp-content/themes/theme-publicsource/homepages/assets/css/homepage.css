@@ -3,12 +3,12 @@ hr {
 }
 .interstitial {
   margin-bottom: 2em;
-  border-top: 1px solid #c4c4c4;
+  border-top: 1px solid #C4C4C4;
   clear: both;
 }
 .interstitial .widget {
   padding: 2em 0;
-  border-bottom: 1px solid #c4c4c4;
+  border-bottom: 1px solid #C4C4C4;
 }
 @media (max-width: 767px) {
   #header-ad-zone-container aside {
@@ -19,31 +19,31 @@ hr {
     border: 4px solid transparent;
     line-height: 1;
     padding: 1em 1.5em;
-    color: #ffffff;
+    color: #fff;
     font-family: 'tk-mallory-n7', sans-serif;
     text-transform: uppercase;
   }
   #header-ad-zone-container aside button a,
   #header-ad-zone-container aside button a:visited {
-    color: #ffffff;
+    color: #fff;
   }
   #header-ad-zone-container aside button:hover {
     background: #418cff;
   }
   #header-ad-zone-container aside button.secondary {
-    background: #fb6927;
+    background: #FB6927;
   }
   #header-ad-zone-container aside button.secondary:hover {
     background-color: #ff6723;
   }
   #header-ad-zone-container aside button.alt1 {
-    background: #fb6927;
+    background: #FB6927;
   }
   #header-ad-zone-container aside button.alt1:hover {
     background: #eb4c04;
   }
   #header-ad-zone-container aside button.alt2 {
-    background: #ffffff;
+    background: #fff;
     border-color: #418cff;
     color: #418cff;
   }
@@ -84,8 +84,8 @@ hr {
   font-family: 'tk-mallory-n3', sans-serif;
 }
 #home-recent-grid .span6 h5.top-tag a {
-  color: #ffffff;
-  padding: .25em .5em;
+  color: #fff;
+  padding: 0.25em 0.5em;
   font-size: 12px;
   line-height: 2;
 }
@@ -217,7 +217,7 @@ hr {
 #home-category-grid .widget ul li:nth-child(2),
 #home-category-grid .widget ul li:nth-child(3) {
   padding-top: 1em;
-  border-top: solid 1px #c4c4c4;
+  border-top: solid 1px #C4C4C4;
 }
 #home-category-grid .widget h5 {
   font-family: 'tk-mallory-n3', sans-serif;

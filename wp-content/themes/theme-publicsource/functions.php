@@ -5,7 +5,7 @@ define( 'INN_MEMBER', true );
 /**
  * Include theme files
  *
- * Based off of how Largo loads files: https://github.com/INN/Largo/blob/master/functions.php#L358
+ * Based off of how Largo loads files: https://github.com/INN/largo/blob/v0.6.3/functions.php#L204-L208
  *
  * 1. hook function Largo() on after_setup_theme
  * 2. function Largo() runs Largo::get_instance()
@@ -16,7 +16,15 @@ define( 'INN_MEMBER', true );
  * @link https://github.com/INN/Largo/blob/master/functions.php#L145
  */
 function largo_child_require_files() {
-	require_once( get_stylesheet_directory() . '/homepages/layouts/publicsource.php' );
+	$includes = array(
+		'/homepages/layouts/publicsource.php',
+		'/inc/metaboxes.php',
+	);
+	foreach ( $includes as $include ) {
+		if ( 0 === validate_file( get_stylesheet_directory() ) ) {
+			require_once( get_stylesheet_directory() . $include );
+		}
+	}
 }
 add_action( 'after_setup_theme', 'largo_child_require_files' );
 
@@ -26,7 +34,13 @@ add_action( 'after_setup_theme', 'largo_child_require_files' );
 function publicsource_stylesheet() {
 	wp_dequeue_style( 'largo-child-styles' );
 	$suffix = (LARGO_DEBUG)? '' : '.min';
-	wp_enqueue_style( 'publicsource', get_stylesheet_directory_uri() . '/css/style' . $suffix . '.css' );
+	$style_css = '/css/style' . $suffix . '.css';
+	wp_enqueue_style(
+		'publicsource',
+		get_stylesheet_directory_uri() . $style_css,
+		array(),
+		filemtime( get_stylesheet_directory() . $style_css )
+	);
 }
 add_action( 'wp_enqueue_scripts', 'publicsource_stylesheet', 20 );
 
