@@ -666,17 +666,30 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   .nav-shelf li.donate {
     display: block;
   }
-  #header-extras li.donate {
-    display: none;
-  }
 }
 @media (min-width: 391px) {
-  .nav-shelf li.donate {
-    display: none;
-  }
   #header-extras li.donate {
     display: block;
   }
+}
+@media (max-width: 480px) {
+  #header-extras li.donate {
+    display: block;
+  }
+}
+#site-footer #supplementary .largo-donate {
+  margin-bottom: 0;
+}
+#site-footer #supplementary .largo-donate .btn.btn-primary {
+  margin-top: 1em;
+}
+#site-footer #supplementary .btn.btn-subscribe {
+  background: 0 0;
+  color: #418cff;
+  text-transform: uppercase;
+  font-family: 'tk-mallory-n7', sans-serif;
+  font-size: 2em;
+  width: 100%;
 }
 body {
   font-family: 'tk-crimson-n5', serif;
