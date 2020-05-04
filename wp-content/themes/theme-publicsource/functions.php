@@ -144,3 +144,24 @@ add_action( 'wp_loaded', function() {
 	remove_action( 'in_widget_form', 'largo_widget_custom_fields_form', 1 );
 	add_action( 'in_widget_form', 'publicsource_widget_custom_fields_form', 1, 3 );
 });
+
+/**
+ * Adds the ability to include a widget area in the header of a category archive page.
+ * The widget area must use the same name as the slug of the category it is going to be used on.
+ * 
+ * If a widget area with a matching name does not exist or is empty, no widget area will be displayed.
+ * 
+ * @see https://github.com/INN/umbrella-mwcir/issues/42
+ * @see https://github.com/INN/umbrella-publicsource/pull/40
+ */
+function category_header_widget_area() {
+
+	$category = get_queried_object();
+	$category_slug = $category->slug;
+
+	if ( is_active_sidebar( $category_slug ) ) {
+		dynamic_sidebar( $category_slug );
+	}
+
+}
+add_action( 'largo_category_after_description_in_header', 'category_header_widget_area' );
