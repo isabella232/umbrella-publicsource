@@ -152,6 +152,7 @@ add_action( 'wp_loaded', function() {
  * If a widget area with a matching name does not exist or is empty, no widget area will be displayed.
  * 
  * @see https://github.com/INN/umbrella-mwcir/issues/42
+ * @see https://github.com/INN/umbrella-publicsource/pull/40
  */
 function category_header_widget_area() {
 
