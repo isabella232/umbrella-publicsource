@@ -1,18 +1,39 @@
 #site-footer {
     #supplementary {
-        .largo-donate {
+        .widget.largo-donate {
             margin-bottom: 0;
-            .btn.btn-primary {
-                margin-top: @unit;
+            padding-bottom: 0;
+                .btn.btn-primary {
+                    margin-top: 1em;
+                    background: @blue;
+                    color: @white;
+                    margin-bottom: 0;
+                    text-align: center;
+                    vertical-align: middle;
+                    padding: 4px 10px;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    border-radius: 3px;
+                    display: inline-block;
+                    cursor: pointer;
+                    border-radius: 0;
+                    font-family: @ps_sans;
+                    &:hover {
+                    color: @blue;
+                    background: @white;
+                }
             }
         }
-        .btn.btn-subscribe {
-            background: 0 0;
-            color: @blue;
-            text-transform: uppercase;
-            font-family: @ps_sans_bold;
-            font-size: @unit2x;
-            width: 100%;
+        .footer-subscribe-container {
+            text-align: center;
+            .btn.btn-subscribe {
+                background: @orange;
+                font-family: @ps_sans;
+                &:hover {
+                    color: @white;
+                    background: darken(@orange, 10%);
+                }
+            }
         }
     }
 }

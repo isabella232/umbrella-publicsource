@@ -677,19 +677,40 @@ body.normal.page.page-template-page-clean article.page > header h1 {
     display: block;
   }
 }
-#site-footer #supplementary .largo-donate {
+#site-footer #supplementary .widget.largo-donate {
   margin-bottom: 0;
+  padding-bottom: 0;
 }
-#site-footer #supplementary .largo-donate .btn.btn-primary {
+#site-footer #supplementary .widget.largo-donate .btn.btn-primary {
   margin-top: 1em;
+  background: #418cff;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 0;
+  font-family: 'tk-mallory-n3', sans-serif;
 }
-#site-footer #supplementary .btn.btn-subscribe {
-  background: 0 0;
+#site-footer #supplementary .widget.largo-donate .btn.btn-primary:hover {
   color: #418cff;
-  text-transform: uppercase;
-  font-family: 'tk-mallory-n7', sans-serif;
-  font-size: 2em;
-  width: 100%;
+  background: #fff;
+}
+#site-footer #supplementary .footer-subscribe-container {
+  text-align: center;
+}
+#site-footer #supplementary .footer-subscribe-container .btn.btn-subscribe {
+  background: #ffb441;
+  font-family: 'tk-mallory-n3', sans-serif;
+}
+#site-footer #supplementary .footer-subscribe-container .btn.btn-subscribe:hover {
+  color: #fff;
+  background: #ffa00e;
 }
 body {
   font-family: 'tk-crimson-n5', serif;
