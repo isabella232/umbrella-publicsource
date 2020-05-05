@@ -705,12 +705,12 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   text-align: center;
 }
 #site-footer #supplementary .footer-subscribe-container .btn.btn-subscribe {
-  background: #ffb441;
+  background: #FB6927;
   font-family: 'tk-mallory-n3', sans-serif;
 }
 #site-footer #supplementary .footer-subscribe-container .btn.btn-subscribe:hover {
   color: #fff;
-  background: #ffa00e;
+  background: #eb4c04;
 }
 body {
   font-family: 'tk-crimson-n5', serif;
