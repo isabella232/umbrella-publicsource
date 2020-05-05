@@ -681,7 +681,8 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-#site-footer #supplementary .widget.largo-donate .btn {
+#site-footer #supplementary .widget.largo-donate .btn.btn-primary {
+  margin-top: 1em;
   background: #418cff;
   color: #fff;
   margin-bottom: 0;
@@ -696,7 +697,7 @@ body.normal.page.page-template-page-clean article.page > header h1 {
   border-radius: 0;
   font-family: 'tk-mallory-n3', sans-serif;
 }
-#site-footer #supplementary .widget.largo-donate .btn:hover {
+#site-footer #supplementary .widget.largo-donate .btn.btn-primary:hover {
   color: #418cff;
   background: #fff;
 }
